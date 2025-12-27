@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Teste GTM + GA4</title>
+
+  <!-- GTM (substitua pelo seu ID depois) -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');
+  </script>
+</head>
+
+<body>
+  <h1>Site de Teste GTM</h1>
+
+  <button id="btn-teste">Clique aqui</button>
+
+  <script>
+    document.getElementById("btn-teste").addEventListener("click", function() {
+      window.dataLayer = window.dataLayer || [];
+      dataLayer.push({
+        event: "botao_clicado",
+        botao_nome: "botao_teste"
+      });
+    });
+  </script>
+</body>
+</html>
