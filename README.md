@@ -24,3 +24,82 @@ https://nycollenailde.github.io/ads-analytics-site/
 
 Fluxo de dados implementado:
 
+
+📌 O site envia eventos para o `dataLayer`, que são capturados pelo GTM e encaminhados ao GA4.
+
+---
+
+## 🧩 Tecnologias utilizadas
+
+- HTML5 / CSS3 / JavaScript
+- Google Tag Manager (Web container)
+- Google Analytics 4
+- GitHub Pages (hosting)
+
+---
+
+## 🧪 Eventos implementados
+
+### 1. `add_to_cart`
+Evento de ecommerce recomendado pelo GA4.
+
+**Disparo:** clique no botão *Add to Cart*  
+**Parâmetros enviados:**
+- `currency`
+- `value`
+- `items[]` (item_id, item_name, price, quantity)
+
+---
+
+### 2. `generate_lead`
+Evento de geração de lead.
+
+**Disparo:** clique no botão *Generate Lead*  
+**Parâmetros enviados:**
+- `lead_type`
+- `page_location`
+
+---
+
+### 3. `login`
+Evento de login de usuário.
+
+**Disparo:** clique no botão *Login*  
+**Parâmetros enviados:**
+- `method`
+- `user_id` (mock)
+
+---
+
+## 🔍 Validação e Debug
+
+A implementação foi validada utilizando:
+
+- **Preview do Google Tag Manager**
+- **DebugView do GA4**
+
+Os eventos e parâmetros podem ser observados em tempo real no DebugView.
+
+📷 Exemplos de validação:
+
+![DebugView add_to_cart](docs/debugview-add-to-cart.png)  
+![DebugView generate_lead](docs/debugview-generate-lead.png)  
+![DebugView login](docs/debugview-login.png)
+
+---
+
+## 📈 Próximos passos (roadmap)
+
+- Marcar eventos como conversões no GA4
+- Criar públicos baseados em comportamento
+- Integrar Google Ad Manager (GAM)
+- Testar eventos de impressão e clique em anúncios
+
+---
+
+## 👩‍💻 Autora
+
+Projeto desenvolvido por **Nycolle Nailde**  
+com foco em **Analytics, Ads e Data**.
+
+
