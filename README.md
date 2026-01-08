@@ -22,7 +22,17 @@ https://nycollenailde.github.io/ads-analytics-site/
 
 ## 🧱 Arquitetura de tracking
 
-Fluxo de dados implementado:
+Fluxo de dados implementado no projeto:
+
+Usuário  
+↓  
+Site (HTML + JS)  
+↓  
+dataLayer.push()  
+↓  
+Google Tag Manager  
+↓  
+Google Analytics 4
 
 
 📌 O site envia eventos para o `dataLayer`, que são capturados pelo GTM e encaminhados ao GA4.
